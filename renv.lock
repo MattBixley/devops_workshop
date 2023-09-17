@@ -1352,6 +1352,12 @@
       ],
       "Hash": "3854c37590717c08c32ec8542a2e0a35"
     },
+    "rsconnect": {
+      "Package": "rsconnect",
+      "Source": "CRAN",
+      "Version": "1.1.0",
+      "Required": true
+    },
     "rstudioapi": {
       "Package": "rstudioapi",
       "Version": "0.15.0",
@@ -1381,7 +1387,7 @@
     },
     "sass": {
       "Package": "sass",
-      "Version": "0.4.1.0.0.0.1647886269",
+      "Version": "0.4.7",
       "Source": "Repository",
       "Repository": "RSPM",
       "Requirements": [
@@ -1391,7 +1397,7 @@
         "rappdirs",
         "rlang"
       ],
-      "Hash": "a8fdd059f386cd08d96db4a1b244c3fa"
+      "Hash": "6bd4d33b50ff927191ec9acbf52fd056"
     },
     "scales": {
       "Package": "scales",
