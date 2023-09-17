@@ -21,7 +21,7 @@ library(paletteer)
 library(ggsci)
 ```
 
-```{r tidydata}
+```{r tidydata, warning=F, message=F}
 
 penguin_sum <- penguins %>%
   group_by(island, year) %>%
