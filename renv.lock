@@ -315,6 +315,12 @@
       ],
       "Hash": "bb097fccb22d156624fd07cd2894ddb6"
     },
+    "rsconnect": {
+      "Package": "rsconnect",
+      "Source": "CRAN",
+      "Version": "1.1.0",
+      "Required": true
+    },
     "cpp11": {
       "Package": "cpp11",
       "Version": "0.4.6",
@@ -1351,12 +1357,6 @@
         "yaml"
       ],
       "Hash": "3854c37590717c08c32ec8542a2e0a35"
-    },
-    "rsconnect": {
-      "Package": "rsconnect",
-      "Source": "CRAN",
-      "Version": "1.1.0",
-      "Required": true
     },
     "rstudioapi": {
       "Package": "rstudioapi",
