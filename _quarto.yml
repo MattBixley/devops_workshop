@@ -22,7 +22,7 @@ website:
       collapse-level: 2
       contents:
         - workshops.qmd
-        - /pages/day1.qmd
+        - pages/day1.qmd
         - day2.qmd
     - id: talks
       title: "Talks"
