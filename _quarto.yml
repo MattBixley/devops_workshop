@@ -8,16 +8,23 @@ website:
       - href: index.qmd
         text: Home
       - about.qmd
-      - sidebar:days
+      - sidebar:workshops
+      - sidebar:talks
   sidebar:
-    - id: days
-      title: "days"
+    - id: workshops
+      title: "Workshops"
       style: "docked"
       background: light
       collapse-level: 2
       contents: 
         - day1.qmd
         - day2.qmd
+        
+    - id: talks
+      title: "Talks"
+      style: "docked"
+      background: light
+      contents: 
         - day3.qmd
         - day4.qmd
 
