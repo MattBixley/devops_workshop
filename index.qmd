@@ -13,3 +13,6 @@ To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
 ```{r}
 1 + 1
 ```
+
+Publish to Confluence\
+https://quarto.org/docs/publishing/confluence.html
