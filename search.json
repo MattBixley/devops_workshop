@@ -14,29 +14,8 @@
     "text": "Docker Stuff"
   },
   {
-    "objectID": "talks.html",
-    "href": "talks.html",
-    "title": "Talks",
-    "section": "",
-    "text": "list of talks"
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this site\nMy first webpage in quarto\n\n1 + 1\n\n[1] 2"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "posit::conf(2023)",
-    "section": "",
-    "text": "https://posit.co/conference/\n---\nThis is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites.\n\n1 + 1\n\n[1] 2"
-  },
-  {
-    "objectID": "workshops.html",
-    "href": "workshops.html",
+    "objectID": "pages/workshops.html",
+    "href": "pages/workshops.html",
     "title": "Workshops",
     "section": "",
     "text": "list of workshops\nWorkshops Repo - posit-conf-2023\nDevOps for Data Scientists"
@@ -47,6 +26,27 @@
     "title": "Day 3",
     "section": "",
     "text": "Talks\nhttps://github.com/pncnmnp/typst-poster\nMine’s talk: https://mine.quarto.pub/manuscripts-conf23/#/title-slide\nCharlotte’s talk: https://cwickham.github.io/whats-new-in-quarto/#/title-slide"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "posit::conf(2023)",
+    "section": "",
+    "text": "https://posit.co/conference/\n---\nThis is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites.\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "pages/about.html",
+    "href": "pages/about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site\nMy first webpage in quarto\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "pages/talks.html",
+    "href": "pages/talks.html",
+    "title": "Talks",
+    "section": "",
+    "text": "list of talks"
   },
   {
     "objectID": "pages/day4.html",
