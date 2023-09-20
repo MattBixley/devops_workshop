@@ -1,0 +1,74 @@
+---
+title: "Day 1"
+---
+
+https://posit-conf-2023.github.io/devops/
+
+My first webpage in quarto
+
+```{r imports}
+library(ggplot2)
+library(palmerpenguins)
+library(kableExtra)
+library(tidyverse)
+library(gt)
+library(scales)
+library(paletteer)
+library(ggsci)
+```
+
+```{r tidydata, warning=F, message=F}
+
+penguin_sum <- penguins %>%
+  group_by(island, year) %>%
+  summarize(mean_body_mass_g = mean(body_mass_g, na.rm = TRUE)) %>% 
+  ungroup()
+
+```
+
+```{r table}
+palette <- paletteer::paletteer_d("ggsci::teal_material", n = 3) %>%
+  as.character()
+
+penguin_sum %>% 
+  gt() %>% 
+  cols_label(
+    mean_body_mass_g = "Mean Body Mass (g)"
+    ) %>% 
+  tab_header(
+    title = md("**Mean body mass of penguins on different islands**"),
+    subtitle = "2007-2009"
+    ) %>% 
+  data_color(
+    columns = "island",
+    colors = scales::col_factor(
+      as.character(palette),
+      domain = NULL
+    )
+  )
+```
+
+```{r plot, echo = FALSE}
+bill_len_dep <- ggplot(data = penguins,
+                         aes(x = bill_length_mm,
+                             y = bill_depth_mm,
+                             group = species)) +
+  geom_point(aes(color = species, 
+                 shape = species),
+             size = 3,
+             alpha = 0.8) +
+  geom_smooth(method = "lm", se = FALSE, aes(color = species)) +
+  scale_color_manual(values = c("darkorange","purple","cyan4")) +
+  labs(title = "Penguin bill dimensions",
+       subtitle = "Bill length and depth for Adelie, Chinstrap and Gentoo Penguins at Palmer Station LTER",
+       x = "Bill length (mm)",
+       y = "Bill depth (mm)",
+       color = "Penguin species",
+       shape = "Penguin species") +
+  theme(legend.position = c(0.85, 0.15),
+        plot.title.position = "plot",
+        plot.caption = element_text(hjust = 0, face= "italic"),
+        plot.caption.position = "plot")
+
+bill_len_dep
+```

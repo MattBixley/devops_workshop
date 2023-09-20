@@ -1,0 +1,11 @@
+---
+title: "Day 3"
+---
+
+Talks
+
+https://github.com/pncnmnp/typst-poster
+
+Mine's talk: https://mine.quarto.pub/manuscripts-conf23/#/title-slide
+
+Charlotte's talk: https://cwickham.github.io/whats-new-in-quarto/#/title-slide
