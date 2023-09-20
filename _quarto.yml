@@ -13,7 +13,7 @@ website:
         file: workshops.qmd
       - text: "Talks"
         file: talks.qmd
-        
+
   sidebar:
     - id: workshops
       title: "Workshops"
@@ -24,7 +24,6 @@ website:
         - workshops.qmd
         - day1.qmd
         - day2.qmd
-        
     - id: talks
       title: "Talks"
       style: "docked"
