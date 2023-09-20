@@ -1,1 +1,1 @@
-Sitemap: https://github.com/MattBixley/devops_workshop/sitemap.xml
+Sitemap: https://github.com/MattBixley/myPOSITconf/sitemap.xml
