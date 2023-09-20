@@ -5,19 +5,22 @@ website:
   title: "posit::conf(2023)"
   navbar:
     left:
-      - href: index.qmd
-        text: Home
-      - about.qmd
-      - workshops.qmd
-        - sidebar:workshops
-      - sidebar:talks
+      - text: "Home"
+        file: index.qmd
+      - text: "About"
+        file: about.qmd
+      - text: "Workshops"
+        file: workshop.qmd
+      - text: "Talks"
+        file: talks.qmd
+        
   sidebar:
     - id: workshops
       title: "Workshops"
       style: "docked"
       background: light
       collapse-level: 2
-      contents: 
+      contents:
         - workshops.qmd
         - day1.qmd
         - day2.qmd
@@ -27,6 +30,7 @@ website:
       style: "docked"
       background: light
       contents: 
+        - talks.qmd
         - day3.qmd
         - day4.qmd
 
