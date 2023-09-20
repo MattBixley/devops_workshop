@@ -7,7 +7,10 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - about.qmd
+      - href: about.qmd
+      - text: About
+      - href: workshops.qmd
+      - text: Workshops
       - sidebar:workshops
       - sidebar:talks
   sidebar:
