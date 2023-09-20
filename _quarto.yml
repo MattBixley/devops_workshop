@@ -7,11 +7,9 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - href: about.qmd
-      - text: About
-      - href: workshops.qmd
-      - text: Workshops
-      - sidebar:workshops
+      - about.qmd
+      - workshops.qmd
+        - sidebar:workshops
       - sidebar:talks
   sidebar:
     - id: workshops
@@ -20,6 +18,7 @@ website:
       background: light
       collapse-level: 2
       contents: 
+        - workshops.qmd
         - day1.qmd
         - day2.qmd
         
