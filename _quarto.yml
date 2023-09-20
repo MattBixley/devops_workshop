@@ -8,10 +8,18 @@ website:
       - href: index.qmd
         text: Home
       - about.qmd
-      - day1.qmd
-      - day2.qmd
-      - day3.qmd
-      - day4.qmd
+      - sidebar:days
+  sidebar:
+    - id: days
+      title: "days"
+      style: "docked"
+      background: light
+      collapse-level: 2
+      contents: 
+        - day1.qmd
+        - day2.qmd
+        - day3.qmd
+        - day4.qmd
 
 format:
   html:
