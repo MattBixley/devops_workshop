@@ -1,35 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://github.com/MattBixley/myPOSITconf/day1.html</loc>
-    <lastmod>2023-09-20T16:30:39.478Z</lastmod>
+    <loc>https://github.com/MattBixley/myPOSITconf/pages/day1.html</loc>
+    <lastmod>2023-09-20T17:37:15.076Z</lastmod>
   </url>
   <url>
-    <loc>https://github.com/MattBixley/myPOSITconf/day2.html</loc>
-    <lastmod>2023-09-20T16:30:32.546Z</lastmod>
-  </url>
-  <url>
-    <loc>https://github.com/MattBixley/myPOSITconf/workshops.html</loc>
-    <lastmod>2023-09-20T16:30:31.978Z</lastmod>
-  </url>
-  <url>
-    <loc>https://github.com/MattBixley/myPOSITconf/day3.html</loc>
-    <lastmod>2023-09-20T16:30:28.626Z</lastmod>
-  </url>
-  <url>
-    <loc>https://github.com/MattBixley/myPOSITconf/index.html</loc>
-    <lastmod>2023-09-20T16:30:27.974Z</lastmod>
-  </url>
-  <url>
-    <loc>https://github.com/MattBixley/myPOSITconf/about.html</loc>
-    <lastmod>2023-09-20T16:30:31.690Z</lastmod>
+    <loc>https://github.com/MattBixley/myPOSITconf/pages/day2.html</loc>
+    <lastmod>2023-09-20T17:37:05.412Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/MattBixley/myPOSITconf/talks.html</loc>
-    <lastmod>2023-09-20T16:30:32.262Z</lastmod>
+    <lastmod>2023-09-20T17:37:04.672Z</lastmod>
   </url>
   <url>
-    <loc>https://github.com/MattBixley/myPOSITconf/day4.html</loc>
-    <lastmod>2023-09-20T16:30:32.826Z</lastmod>
+    <loc>https://github.com/MattBixley/myPOSITconf/about.html</loc>
+    <lastmod>2023-09-20T17:37:03.928Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/MattBixley/myPOSITconf/index.html</loc>
+    <lastmod>2023-09-20T17:36:59.032Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/MattBixley/myPOSITconf/workshops.html</loc>
+    <lastmod>2023-09-20T17:37:04.312Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/MattBixley/myPOSITconf/pages/day3.html</loc>
+    <lastmod>2023-09-20T17:37:05.040Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/MattBixley/myPOSITconf/pages/day4.html</loc>
+    <lastmod>2023-09-20T17:37:05.760Z</lastmod>
   </url>
 </urlset>
