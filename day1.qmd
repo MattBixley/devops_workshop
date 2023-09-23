@@ -6,7 +6,7 @@ https://posit-conf-2023.github.io/devops/
 
 My first webpage in quarto
 
-```{r imports}
+```{r imports, quietly = T, warning=F, message=F}
 library(ggplot2)
 library(palmerpenguins)
 library(kableExtra)

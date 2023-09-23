@@ -1,5 +1,7 @@
 project:
   type: website
+  execute-dir: file
+  output-dir: output
 
 website:
   title: "posit::conf(2023)"

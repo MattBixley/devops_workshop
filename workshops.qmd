@@ -4,6 +4,7 @@ title: "Workshops"
 
 list of workshops
 
-Workshops Repo - [posit-conf-2023](https://github.com/posit-conf-2023)
+Workshops Repo - [posit-conf-2023](https://github.com/posit-conf-2023){target="_blank"}
 
-[DevOps for Data Scientists](https://posit-conf-2023.github.io/devops/)
+[DevOps for Data Scientists](https://posit-conf-2023.github.io/devops/){target="_blank"}
+
