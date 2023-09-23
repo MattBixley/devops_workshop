@@ -202,66 +202,42 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <p>https://posit-conf-2023.github.io/devops/</p>
 <p>My first webpage in quarto</p>
-<div class="cell">
+<div class="cell" data-quietly="true">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(palmerpenguins)</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(kableExtra)</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
-✔ dplyr     1.1.3     ✔ readr     2.1.4
-✔ forcats   1.0.0     ✔ stringr   1.5.0
-✔ lubridate 1.9.2     ✔ tibble    3.2.1
-✔ purrr     1.0.2     ✔ tidyr     1.3.0
-── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
-✖ dplyr::filter()     masks stats::filter()
-✖ dplyr::group_rows() masks kableExtra::group_rows()
-✖ dplyr::lag()        masks stats::lag()
-ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gt)</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(scales)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>
-Attaching package: 'scales'
-
-The following object is masked from 'package:purrr':
-
-    discard
-
-The following object is masked from 'package:readr':
-
-    col_factor</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(paletteer)</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggsci)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gt)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(scales)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(paletteer)</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggsci)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>penguin_sum <span class="ot">&lt;-</span> penguins <span class="sc">%&gt;%</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(island, year) <span class="sc">%&gt;%</span></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">mean_body_mass_g =</span> <span class="fu">mean</span>(body_mass_g, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)) <span class="sc">%&gt;%</span> </span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>penguin_sum <span class="ot">&lt;-</span> penguins <span class="sc">%&gt;%</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(island, year) <span class="sc">%&gt;%</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">mean_body_mass_g =</span> <span class="fu">mean</span>(body_mass_g, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)) <span class="sc">%&gt;%</span> </span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>palette <span class="ot">&lt;-</span> paletteer<span class="sc">::</span><span class="fu">paletteer_d</span>(<span class="st">"ggsci::teal_material"</span>, <span class="at">n =</span> <span class="dv">3</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">as.character</span>()</span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>penguin_sum <span class="sc">%&gt;%</span> </span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">gt</span>() <span class="sc">%&gt;%</span> </span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">cols_label</span>(</span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">mean_body_mass_g =</span> <span class="st">"Mean Body Mass (g)"</span></span>
-<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">%&gt;%</span> </span>
-<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tab_header</span>(</span>
-<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="fu">md</span>(<span class="st">"**Mean body mass of penguins on different islands**"</span>),</span>
-<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="st">"2007-2009"</span></span>
-<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">%&gt;%</span> </span>
-<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">data_color</span>(</span>
-<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">columns =</span> <span class="st">"island"</span>,</span>
-<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">colors =</span> scales<span class="sc">::</span><span class="fu">col_factor</span>(</span>
-<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>      <span class="fu">as.character</span>(palette),</span>
-<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>      <span class="at">domain =</span> <span class="cn">NULL</span></span>
-<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>    )</span>
-<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>palette <span class="ot">&lt;-</span> paletteer<span class="sc">::</span><span class="fu">paletteer_d</span>(<span class="st">"ggsci::teal_material"</span>, <span class="at">n =</span> <span class="dv">3</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">as.character</span>()</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>penguin_sum <span class="sc">%&gt;%</span> </span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">gt</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">cols_label</span>(</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">mean_body_mass_g =</span> <span class="st">"Mean Body Mass (g)"</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">%&gt;%</span> </span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tab_header</span>(</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="fu">md</span>(<span class="st">"**Mean body mass of penguins on different islands**"</span>),</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="st">"2007-2009"</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">%&gt;%</span> </span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">data_color</span>(</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">columns =</span> <span class="st">"island"</span>,</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">colors =</span> scales<span class="sc">::</span><span class="fu">col_factor</span>(</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>      <span class="fu">as.character</span>(palette),</span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>      <span class="at">domain =</span> <span class="cn">NULL</span></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Warning: Since gt v0.9.0, the `colors` argument has been deprecated.
 • Please use the `fn` argument instead.
@@ -269,23 +245,23 @@ This warning is displayed once every 8 hours.</code></pre>
 </div>
 <div class="cell-output-display">
 
-<div id="bzqnruomxy" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#bzqnruomxy table {
+<div id="gxjpmqsqaz" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#gxjpmqsqaz table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#bzqnruomxy thead, #bzqnruomxy tbody, #bzqnruomxy tfoot, #bzqnruomxy tr, #bzqnruomxy td, #bzqnruomxy th {
+#gxjpmqsqaz thead, #gxjpmqsqaz tbody, #gxjpmqsqaz tfoot, #gxjpmqsqaz tr, #gxjpmqsqaz td, #gxjpmqsqaz th {
   border-style: none;
 }
 
-#bzqnruomxy p {
+#gxjpmqsqaz p {
   margin: 0;
   padding: 0;
 }
 
-#bzqnruomxy .gt_table {
+#gxjpmqsqaz .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -311,12 +287,12 @@ This warning is displayed once every 8 hours.</code></pre>
   border-left-color: #D3D3D3;
 }
 
-#bzqnruomxy .gt_caption {
+#gxjpmqsqaz .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#bzqnruomxy .gt_title {
+#gxjpmqsqaz .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -328,7 +304,7 @@ This warning is displayed once every 8 hours.</code></pre>
   border-bottom-width: 0;
 }
 
-#bzqnruomxy .gt_subtitle {
+#gxjpmqsqaz .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -340,7 +316,7 @@ This warning is displayed once every 8 hours.</code></pre>
   border-top-width: 0;
 }
 
-#bzqnruomxy .gt_heading {
+#gxjpmqsqaz .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -352,13 +328,13 @@ This warning is displayed once every 8 hours.</code></pre>
   border-right-color: #D3D3D3;
 }
 
-#bzqnruomxy .gt_bottom_border {
+#gxjpmqsqaz .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#bzqnruomxy .gt_col_headings {
+#gxjpmqsqaz .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -373,7 +349,7 @@ This warning is displayed once every 8 hours.</code></pre>
   border-right-color: #D3D3D3;
 }
 
-#bzqnruomxy .gt_col_heading {
+#gxjpmqsqaz .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -393,7 +369,7 @@ This warning is displayed once every 8 hours.</code></pre>
   overflow-x: hidden;
 }
 
-#bzqnruomxy .gt_column_spanner_outer {
+#gxjpmqsqaz .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -405,15 +381,15 @@ This warning is displayed once every 8 hours.</code></pre>
   padding-right: 4px;
 }
 
-#bzqnruomxy .gt_column_spanner_outer:first-child {
+#gxjpmqsqaz .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#bzqnruomxy .gt_column_spanner_outer:last-child {
+#gxjpmqsqaz .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#bzqnruomxy .gt_column_spanner {
+#gxjpmqsqaz .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -425,11 +401,11 @@ This warning is displayed once every 8 hours.</code></pre>
   width: 100%;
 }
 
-#bzqnruomxy .gt_spanner_row {
+#gxjpmqsqaz .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#bzqnruomxy .gt_group_heading {
+#gxjpmqsqaz .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -455,7 +431,7 @@ This warning is displayed once every 8 hours.</code></pre>
   text-align: left;
 }
 
-#bzqnruomxy .gt_empty_group_heading {
+#gxjpmqsqaz .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -470,15 +446,15 @@ This warning is displayed once every 8 hours.</code></pre>
   vertical-align: middle;
 }
 
-#bzqnruomxy .gt_from_md > :first-child {
+#gxjpmqsqaz .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#bzqnruomxy .gt_from_md > :last-child {
+#gxjpmqsqaz .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#bzqnruomxy .gt_row {
+#gxjpmqsqaz .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -497,7 +473,7 @@ This warning is displayed once every 8 hours.</code></pre>
   overflow-x: hidden;
 }
 
-#bzqnruomxy .gt_stub {
+#gxjpmqsqaz .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -510,7 +486,7 @@ This warning is displayed once every 8 hours.</code></pre>
   padding-right: 5px;
 }
 
-#bzqnruomxy .gt_stub_row_group {
+#gxjpmqsqaz .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -524,15 +500,15 @@ This warning is displayed once every 8 hours.</code></pre>
   vertical-align: top;
 }
 
-#bzqnruomxy .gt_row_group_first td {
+#gxjpmqsqaz .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#bzqnruomxy .gt_row_group_first th {
+#gxjpmqsqaz .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#bzqnruomxy .gt_summary_row {
+#gxjpmqsqaz .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -542,16 +518,16 @@ This warning is displayed once every 8 hours.</code></pre>
   padding-right: 5px;
 }
 
-#bzqnruomxy .gt_first_summary_row {
+#gxjpmqsqaz .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#bzqnruomxy .gt_first_summary_row.thick {
+#gxjpmqsqaz .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#bzqnruomxy .gt_last_summary_row {
+#gxjpmqsqaz .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -561,7 +537,7 @@ This warning is displayed once every 8 hours.</code></pre>
   border-bottom-color: #D3D3D3;
 }
 
-#bzqnruomxy .gt_grand_summary_row {
+#gxjpmqsqaz .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -571,7 +547,7 @@ This warning is displayed once every 8 hours.</code></pre>
   padding-right: 5px;
 }
 
-#bzqnruomxy .gt_first_grand_summary_row {
+#gxjpmqsqaz .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -581,7 +557,7 @@ This warning is displayed once every 8 hours.</code></pre>
   border-top-color: #D3D3D3;
 }
 
-#bzqnruomxy .gt_last_grand_summary_row_top {
+#gxjpmqsqaz .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -591,11 +567,11 @@ This warning is displayed once every 8 hours.</code></pre>
   border-bottom-color: #D3D3D3;
 }
 
-#bzqnruomxy .gt_striped {
+#gxjpmqsqaz .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#bzqnruomxy .gt_table_body {
+#gxjpmqsqaz .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -604,7 +580,7 @@ This warning is displayed once every 8 hours.</code></pre>
   border-bottom-color: #D3D3D3;
 }
 
-#bzqnruomxy .gt_footnotes {
+#gxjpmqsqaz .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -618,7 +594,7 @@ This warning is displayed once every 8 hours.</code></pre>
   border-right-color: #D3D3D3;
 }
 
-#bzqnruomxy .gt_footnote {
+#gxjpmqsqaz .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -627,7 +603,7 @@ This warning is displayed once every 8 hours.</code></pre>
   padding-right: 5px;
 }
 
-#bzqnruomxy .gt_sourcenotes {
+#gxjpmqsqaz .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -641,7 +617,7 @@ This warning is displayed once every 8 hours.</code></pre>
   border-right-color: #D3D3D3;
 }
 
-#bzqnruomxy .gt_sourcenote {
+#gxjpmqsqaz .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -649,63 +625,63 @@ This warning is displayed once every 8 hours.</code></pre>
   padding-right: 5px;
 }
 
-#bzqnruomxy .gt_left {
+#gxjpmqsqaz .gt_left {
   text-align: left;
 }
 
-#bzqnruomxy .gt_center {
+#gxjpmqsqaz .gt_center {
   text-align: center;
 }
 
-#bzqnruomxy .gt_right {
+#gxjpmqsqaz .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#bzqnruomxy .gt_font_normal {
+#gxjpmqsqaz .gt_font_normal {
   font-weight: normal;
 }
 
-#bzqnruomxy .gt_font_bold {
+#gxjpmqsqaz .gt_font_bold {
   font-weight: bold;
 }
 
-#bzqnruomxy .gt_font_italic {
+#gxjpmqsqaz .gt_font_italic {
   font-style: italic;
 }
 
-#bzqnruomxy .gt_super {
+#gxjpmqsqaz .gt_super {
   font-size: 65%;
 }
 
-#bzqnruomxy .gt_footnote_marks {
+#gxjpmqsqaz .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#bzqnruomxy .gt_asterisk {
+#gxjpmqsqaz .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#bzqnruomxy .gt_indent_1 {
+#gxjpmqsqaz .gt_indent_1 {
   text-indent: 5px;
 }
 
-#bzqnruomxy .gt_indent_2 {
+#gxjpmqsqaz .gt_indent_2 {
   text-indent: 10px;
 }
 
-#bzqnruomxy .gt_indent_3 {
+#gxjpmqsqaz .gt_indent_3 {
   text-indent: 15px;
 }
 
-#bzqnruomxy .gt_indent_4 {
+#gxjpmqsqaz .gt_indent_4 {
   text-indent: 20px;
 }
 
-#bzqnruomxy .gt_indent_5 {
+#gxjpmqsqaz .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
