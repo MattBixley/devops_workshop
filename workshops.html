@@ -167,7 +167,7 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 <p>list of workshops</p>
-<p>Workshops Repo - <a href="https://github.com/posit-conf-2023" target="_blank">posit-conf-2023</a></p>
+<p>Workshops Repo - <a href="https://github.com/posit-conf-2023">posit-conf-2023</a></p>
 <p><a href="https://posit-conf-2023.github.io/devops/" target="_blank">DevOps for Data Scientists</a></p>
 
 
@@ -404,6 +404,20 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       });
     }
   }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var filterRegex = new RegExp("https:\/\/github\.com\/MattBixley\/myPOSITconf");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+          // target, if specified
+          link.setAttribute("target", "_blank");
+      }
+    }
 });
 </script>
 </div> <!-- /content -->
