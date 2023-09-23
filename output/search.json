@@ -1,12 +1,5 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "posit::conf(2023)",
-    "section": "",
-    "text": "https://posit.co/conference/\n----\nThis is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites.\n\n1 + 1\n\n[1] 2\n\n\nPublish to Confluence\nhttps://quarto.org/docs/publishing/confluence.html"
-  },
-  {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About",
@@ -40,6 +33,13 @@
     "title": "Day 4",
     "section": "",
     "text": "Talks"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "posit::conf(2023)",
+    "section": "",
+    "text": "https://posit.co/conference/\n----\nThis is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites.\n\n1 + 1\n\n[1] 2\n\n\nPublish to Confluence\nhttps://quarto.org/docs/publishing/confluence.html"
   },
   {
     "objectID": "talks.html",
