@@ -1,10 +1,12 @@
 ---
 title: "Workshops"
+format: 
+  html:
+    link-external-newwindow: true
 ---
 
 list of workshops
 
-Workshops Repo - [posit-conf-2023](https://github.com/posit-conf-2023){target="_blank"}
+Workshops Repo - [posit-conf-2023](https://github.com/posit-conf-2023)
 
 [DevOps for Data Scientists](https://posit-conf-2023.github.io/devops/){target="_blank"}
-

@@ -1,8 +1,11 @@
 ---
 title: "posit::conf(2023)"
+format: 
+  html:
+    link-external-newwindow: true
 ---
 
-https://posit.co/conference/
+<https://posit.co/conference/>
 
 \-\-\--
 

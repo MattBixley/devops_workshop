@@ -1,6 +1,5 @@
 project:
   type: website
-  execute-dir: file
   output-dir: output
 
 website:
