@@ -11,7 +11,28 @@
     "href": "day1.html#materials",
     "title": "Day 1",
     "section": "Materials",
-    "text": "Materials\n\nSlides\nCode\nLab 1 - Deploy Quarto with GHA\n\nBased on the book by Alex Gold “DevOps for Data Science”\nMy first webpage in quarto\n\nlibrary(ggplot2)\nlibrary(palmerpenguins)\nlibrary(kableExtra)\nlibrary(tidyverse)\nlibrary(gt)\nlibrary(scales)\nlibrary(paletteer)\nlibrary(ggsci)\n\n\npenguin_sum &lt;- penguins %&gt;%\n  group_by(island, year) %&gt;%\n  summarize(mean_body_mass_g = mean(body_mass_g, na.rm = TRUE)) %&gt;% \n  ungroup()\n\n\npalette &lt;- paletteer::paletteer_d(\"ggsci::teal_material\", n = 3) %&gt;%\n  as.character()\n\npenguin_sum %&gt;% \n  gt() %&gt;% \n  cols_label(\n    mean_body_mass_g = \"Mean Body Mass (g)\"\n    ) %&gt;% \n  tab_header(\n    title = md(\"**Mean body mass of penguins on different islands**\"),\n    subtitle = \"2007-2009\"\n    ) %&gt;% \n  data_color(\n    columns = \"island\",\n    colors = scales::col_factor(\n      as.character(palette),\n      domain = NULL\n    )\n  )\n\nWarning: Since gt v0.9.0, the `colors` argument has been deprecated.\n• Please use the `fn` argument instead.\nThis warning is displayed once every 8 hours.\n\n\n\n\n\n\n  \n    \n      Mean body mass of penguins on different islands\n    \n    \n      2007-2009\n    \n    \n      island\n      year\n      Mean Body Mass (g)\n    \n  \n  \n    Biscoe\n2007\n4740.909\n    Biscoe\n2008\n4628.125\n    Biscoe\n2009\n4792.797\n    Dream\n2007\n3684.239\n    Dream\n2008\n3779.412\n    Dream\n2009\n3691.477\n    Torgersen\n2007\n3763.158\n    Torgersen\n2008\n3856.250\n    Torgersen\n2009\n3489.062\n  \n  \n  \n\n\n\n\n\n\n`geom_smooth()` using formula = 'y ~ x'\n\n\nWarning: Removed 2 rows containing non-finite values (`stat_smooth()`).\n\n\nWarning: Removed 2 rows containing missing values (`geom_point()`)."
+    "text": "Materials\n\nSlides\nCode\nLab 1 - Deploy Quarto with GHA\n\nBased on the book by Alex Gold “DevOps for Data Science”\nWe deployed a basic Quarto website at Github pages and POSIT Connect (mutiple bugs and failures) using github actions."
+  },
+  {
+    "objectID": "day1.html#import",
+    "href": "day1.html#import",
+    "title": "Day 1",
+    "section": "Import",
+    "text": "Import\n\npenguin_sum &lt;- penguins %&gt;%\n  group_by(island, year) %&gt;%\n  summarize(mean_body_mass_g = mean(body_mass_g, na.rm = TRUE)) %&gt;% \n  ungroup()"
+  },
+  {
+    "objectID": "day1.html#table",
+    "href": "day1.html#table",
+    "title": "Day 1",
+    "section": "Table",
+    "text": "Table\n\npalette &lt;- paletteer::paletteer_d(\"ggsci::teal_material\", n = 3) %&gt;%\n  as.character()\n\npenguin_sum %&gt;% \n  gt() %&gt;% \n  cols_label(\n    mean_body_mass_g = \"Mean Body Mass (g)\"\n    ) %&gt;% \n  tab_header(\n    title = md(\"**Mean body mass of penguins on different islands**\"),\n    subtitle = \"2007-2009\"\n    ) %&gt;% \n  data_color(\n    columns = \"island\",\n    colors = scales::col_factor(\n      as.character(palette),\n      domain = NULL\n    )\n  )\n\n\n\n\n\n  \n    \n      Mean body mass of penguins on different islands\n    \n    \n      2007-2009\n    \n    \n      island\n      year\n      Mean Body Mass (g)\n    \n  \n  \n    Biscoe\n2007\n4740.909\n    Biscoe\n2008\n4628.125\n    Biscoe\n2009\n4792.797\n    Dream\n2007\n3684.239\n    Dream\n2008\n3779.412\n    Dream\n2009\n3691.477\n    Torgersen\n2007\n3763.158\n    Torgersen\n2008\n3856.250\n    Torgersen\n2009\n3489.062"
+  },
+  {
+    "objectID": "day1.html#plot",
+    "href": "day1.html#plot",
+    "title": "Day 1",
+    "section": "Plot",
+    "text": "Plot\n\nbill_len_dep &lt;- ggplot(data = penguins,\n                         aes(x = bill_length_mm,\n                             y = bill_depth_mm,\n                             group = species)) +\n  geom_point(aes(color = species, \n                 shape = species),\n             size = 3,\n             alpha = 0.8) +\n  geom_smooth(method = \"lm\", se = FALSE, aes(color = species)) +\n  scale_color_manual(values = c(\"darkorange\",\"purple\",\"cyan4\")) +\n  labs(title = \"Penguin bill dimensions\",\n       subtitle = \"Bill length and depth for Adelie, Chinstrap and Gentoo Penguins at Palmer Station LTER\",\n       x = \"Bill length (mm)\",\n       y = \"Bill depth (mm)\",\n       color = \"Penguin species\",\n       shape = \"Penguin species\") +\n  theme(legend.position = c(0.85, 0.15),\n        plot.title.position = \"plot\",\n        plot.caption = element_text(hjust = 0, face= \"italic\"),\n        plot.caption.position = \"plot\")\n\nbill_len_dep"
   },
   {
     "objectID": "day2.html",
@@ -25,28 +46,77 @@
     "href": "day2.html#materials",
     "title": "Day 2",
     "section": "Materials",
-    "text": "Materials\n\nSlides\nCode\nLab 2 - Docker\n\nPart 1: Run Commands\nPart 2: Debugging Containers\nPart 3: Mapping Ports\nPart 4: Mounting Data\nPart 5: Building images interactively\nPart 6: Building Shiny Server OS with Dockerfile\n\nLab 3 - Data in Production\n\nPart 1: Host API on Posit Connect\nPart 2: Explore your API\nPart 3: Plumber Examples\nPart 4: Push-button deployment\nPart 5: Programmatically access Connect"
+    "text": "Materials\n\nLab 2 - Docker\n\nPart 1: Run Commands\nPart 2: Debugging Containers\nPart 3: Mapping Ports\nPart 4: Mounting Data\nPart 5: Building images interactively\nPart 6: Building Shiny Server OS with Dockerfile\n\nLab 3 - Data in Production\n\nPart 1: Host API on Posit Connect\nPart 2: Explore your API\nPart 3: Plumber Examples\nPart 4: Push-button deployment\nPart 5: Programmatically access Connect"
   },
   {
     "objectID": "workshops.html",
     "href": "workshops.html",
     "title": "Workshops",
     "section": "",
-    "text": "Workshops Repo - posit-conf-2023\nDevOps for Data Scientists\nTidy Models\nIntro to Quarto\nEngaging and Beautiful Data Visualizations with ggplot2\nGetting Started with Shiny for R\nML and DL with Python"
+    "text": "Workshops Repo - posit-conf-2023\nDevOps for Data Scientists\n\n\nPretty Things\nGetting Started with Shiny for R\nShiny Dashboards\nShiny in Production\nIntro and Advanced Quarto\nEngaging and Beautiful Data Visualizations with ggplot2\nTeaching Data Science Masterclass\n\n\nWorkflows\nML and DL with Python\nData Science Workflows with Posit Tools - R focus\nData Science Workflows - python\nTidy Models\nBig Data with Arrow\n\n\nPackages\nFundamentals of Package Development\nPackage Development Mastercalss"
   },
   {
-    "objectID": "day3.html",
-    "href": "day3.html",
-    "title": "Day 3",
+    "objectID": "chicago.html#section-3",
+    "href": "chicago.html#section-3",
+    "title": "Chicago",
     "section": "",
-    "text": "Keynotes\nKey Note Speaker Jeremy Howard’s notebook! https://github.com/fastai/lm-hackers/blob/main/lm-hackers.ipynb\nhttps://github.com/pncnmnp/typst-poster\nMine’s talk: https://mine.quarto.pub/manuscripts-conf23/#/title-slide\nCharlotte’s talk: https://cwickham.github.io/whats-new-in-quarto/#/title-slide"
+    "text": "Willis Tower - 410m"
+  },
+  {
+    "objectID": "chicago.html#section-5",
+    "href": "chicago.html#section-5",
+    "title": "Chicago",
+    "section": "",
+    "text": "Wrigley Field - The Cubs"
+  },
+  {
+    "objectID": "chicago.html#section-6",
+    "href": "chicago.html#section-6",
+    "title": "Chicago",
+    "section": "",
+    "text": "$NZ85 !!!!"
+  },
+  {
+    "objectID": "talks.html",
+    "href": "talks.html",
+    "title": "Talks",
+    "section": "",
+    "text": "Key Note Speaker Jeremy Howard’s notebook! https://github.com/fastai/lm-hackers/blob/main/lm-hackers.ipynb\nhttps://github.com/pncnmnp/typst-poster"
+  },
+  {
+    "objectID": "talks.html#keynotes",
+    "href": "talks.html#keynotes",
+    "title": "Talks",
+    "section": "",
+    "text": "Key Note Speaker Jeremy Howard’s notebook! https://github.com/fastai/lm-hackers/blob/main/lm-hackers.ipynb\nhttps://github.com/pncnmnp/typst-poster"
+  },
+  {
+    "objectID": "talks.html#quarto",
+    "href": "talks.html#quarto",
+    "title": "Talks",
+    "section": "Quarto",
+    "text": "Quarto\nMine’s talk: https://mine.quarto.pub/manuscripts-conf23/#/title-slide\nCharlotte’s talk: https://cwickham.github.io/whats-new-in-quarto/#/title-slide\nhttps://andreaczhang.github.io/qtwAcademic/\nhttps://quarto.org/docs/publishing/\nparamaterized quarto - https://jadeynryan.github.io/2023_posit-parameterized-quarto/#/title-slide\nPublish to Confluence\nhttps://quarto.org/docs/publishing/confluence.html"
+  },
+  {
+    "objectID": "talks.html#shiny",
+    "href": "talks.html#shiny",
+    "title": "Talks",
+    "section": "Shiny",
+    "text": "Shiny\nshiny without a server - https://github.com/jcheng5/posit-conf-2023-shinylive"
+  },
+  {
+    "objectID": "talks.html#other-resources",
+    "href": "talks.html#other-resources",
+    "title": "Talks",
+    "section": "Other Resources",
+    "text": "Other Resources\nColour - http://web-accessibility.carnegiemuseums.org/design/color/"
   },
   {
     "objectID": "index.html",
     "href": "index.html",
     "title": "posit::conf(2023)",
     "section": "",
-    "text": "https://posit.co/conference/\n----\nThis is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites.\n\n1 + 1\n\n[1] 2\n\n\nPublish to Confluence\nhttps://quarto.org/docs/publishing/confluence.html"
+    "text": "https://posit.co/\nhttps://posit.co/conference/\n\n\n\n\n\n\n\n\n\n\n\nThis is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
   },
   {
     "objectID": "about.html",
@@ -54,19 +124,5 @@
     "title": "About",
     "section": "",
     "text": "About this site\nMy first webpage in quarto\n\n1 + 1\n\n[1] 2"
-  },
-  {
-    "objectID": "talks.html",
-    "href": "talks.html",
-    "title": "Talks",
-    "section": "",
-    "text": "list of talks"
-  },
-  {
-    "objectID": "day4.html",
-    "href": "day4.html",
-    "title": "Day 4",
-    "section": "",
-    "text": "Talks"
   }
 ]
