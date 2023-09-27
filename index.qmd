@@ -8,9 +8,11 @@ format:
 <https://posit.co/>\
 <https://posit.co/conference/>
 
-![](images/posit.jpg){fig-align="center"}
+![](images/posit.jpg){fig-align="center" width="100%"}
 
 ![](images/20230918_145940.jpg){fig-align="center" width="100%"}
+
+![](images/20230917_130428.jpg){fig-align="center" width="100%"}
 
 ![](images/20230917_130428.jpg)
 
