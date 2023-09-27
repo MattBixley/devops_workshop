@@ -5,17 +5,15 @@ format:
     link-external-newwindow: true
 ---
 
+<https://posit.co/>\
 <https://posit.co/conference/>
 
-\-\-\--
+![](images/posit.jpg){fig-align="center"}
+
+![](images/20230918_145940.jpg){fig-align="center" width="100%"}
+
+![](images/20230917_130428.jpg)
 
 This is a Quarto website.
 
 To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
-
-```{r}
-1 + 1
-```
-
-Publish to Confluence\
-https://quarto.org/docs/publishing/confluence.html

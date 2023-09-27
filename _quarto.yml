@@ -14,6 +14,8 @@ website:
         file: workshops.qmd
       - text: "Talks"
         file: talks.qmd
+      - text: "Chicago"
+        file: chicago.qmd
 
   sidebar:
     - id: workshops
@@ -25,14 +27,6 @@ website:
         - workshops.qmd
         - day1.qmd
         - day2.qmd
-    - id: talks
-      title: "Talks"
-      style: "docked"
-      background: light
-      contents: 
-        - talks.qmd
-        - day3.qmd
-        - day4.qmd
 
 format:
   html:

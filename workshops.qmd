@@ -7,14 +7,36 @@ format:
 
 Workshops Repo - [posit-conf-2023](https://github.com/posit-conf-2023)
 
-[DevOps for Data Scientists](https://posit-conf-2023.github.io/devops/)
+[DevOps for Data Scientists](https://posit-conf-2023.github.io/devops/)\
 
-[Tidy Models](https://workshops.tidymodels.org/)
-
-[Intro to Quarto](https://posit-conf-2023.github.io/quarto-r/)
-
-[Engaging and Beautiful Data Visualizations with ggplot2](https://posit-conf-2023.github.io/dataviz-ggplot2/)
+### Pretty Things
 
 [Getting Started with Shiny for R](https://posit-conf-2023.github.io/shiny-r-intro/)
 
+[Shiny Dashboards](https://posit-conf-2023.github.io/shiny-r-dashboard/)
+
+[Shiny in Production](https://posit-conf-2023.github.io/shiny-r-prod/)
+
+[Intro and Advanced Quarto](https://posit-conf-2023.github.io/quarto-r/)
+
+[Engaging and Beautiful Data Visualizations with ggplot2](https://posit-conf-2023.github.io/dataviz-ggplot2/)
+
+[Teaching Data Science Masterclass](https://posit-conf-2023.github.io/teach-ds-masterclass/)
+
+### Workflows
+
 [ML and DL with Python](https://github.com/rasbt/posit2023-python-ml)
+
+[Data Science Workflows with Posit Tools - R focus](https://katie.quarto.pub/ds-workflows-r/)
+
+[Data Science Workflows - python](https://posit-conf-2023.github.io/ds-workflows-python/)
+
+[Tidy Models](https://workshops.tidymodels.org/)
+
+[Big Data with Arrow](https://posit-conf-2023.github.io/arrow/)
+
+### Packages
+
+[Fundamentals of Package Development](https://posit-conf-2023.github.io/pkg-dev/intro.html)
+
+[Package Development Mastercalss](https://github.com/posit-conf-2023/pkg-dev-masterclass)

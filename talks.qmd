@@ -2,4 +2,35 @@
 title: "Talks"
 ---
 
-list of talks
+## Keynotes
+
+Key Note Speaker Jeremy Howard's notebook! <https://github.com/fastai/lm-hackers/blob/main/lm-hackers.ipynb>
+
+https://github.com/pncnmnp/typst-poster
+
+## Quarto
+
+Mine's talk: https://mine.quarto.pub/manuscripts-conf23/#/title-slide
+
+Charlotte's talk: https://cwickham.github.io/whats-new-in-quarto/#/title-slide
+
+https://andreaczhang.github.io/qtwAcademic/
+
+https://quarto.org/docs/publishing/
+
+paramaterized quarto - <https://jadeynryan.github.io/2023_posit-parameterized-quarto/#/title-slide>
+
+Publish to Confluence\
+https://quarto.org/docs/publishing/confluence.html
+
+## Shiny
+
+shiny without a server - https://github.com/jcheng5/posit-conf-2023-shinylive
+
+
+## Other Resources
+
+Colour - <http://web-accessibility.carnegiemuseums.org/design/color/>
+
+
+

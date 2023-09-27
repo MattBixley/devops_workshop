@@ -14,9 +14,9 @@ title: "Day 1"
 
 Based on the book by Alex Gold "[DevOps for Data Science](https://do4ds.com/)"
 
-My first webpage in quarto
+We deployed a basic Quarto website at Github pages and POSIT Connect (mutiple bugs and failures) using github actions.\
 
-```{r imports, quietly = T, warning=F, message=F}
+```{r imports, quietly = T, warning=F, message=F, echo =F}
 library(ggplot2)
 library(palmerpenguins)
 library(kableExtra)
@@ -27,6 +27,8 @@ library(paletteer)
 library(ggsci)
 ```
 
+## Import  
+
 ```{r tidydata, warning=F, message=F}
 
 penguin_sum <- penguins %>%
@@ -36,7 +38,9 @@ penguin_sum <- penguins %>%
 
 ```
 
-```{r table}
+## Table  
+
+```{r table, quietly = T, warning=F, message=F}
 palette <- paletteer::paletteer_d("ggsci::teal_material", n = 3) %>%
   as.character()
 
@@ -58,7 +62,9 @@ penguin_sum %>%
   )
 ```
 
-```{r plot, echo = FALSE}
+## Plot  
+
+```{r plot, quietly = T, warning=F, message=F}
 bill_len_dep <- ggplot(data = penguins,
                          aes(x = bill_length_mm,
                              y = bill_depth_mm,

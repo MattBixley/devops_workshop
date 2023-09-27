@@ -6,10 +6,6 @@ title: "Day 2"
 
 ## **Materials**
 
--   [Slides](https://posit-conf-2023.github.io/devops/slides/workshop_full_slides.html#/title-slide)
-
--   [Code](https://github.com/posit-conf-2023/devops)
-
 -   [Lab 2](https://posit-conf-2023.github.io/devops/coursework_labs/02_lab_docker/Exercises.html) - **Docker**
 
     -   Part 1: [Run](https://docs.docker.com/engine/reference/run/) Commands
