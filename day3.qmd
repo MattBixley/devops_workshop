@@ -2,7 +2,10 @@
 title: "Day 3"
 ---
 
-Talks
+Keynotes
+
+Key Note Speaker Jeremy Howard's notebook!
+<https://github.com/fastai/lm-hackers/blob/main/lm-hackers.ipynb>
 
 https://github.com/pncnmnp/typst-poster
 

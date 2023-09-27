@@ -2,4 +2,27 @@
 title: "Day 2"
 ---
 
-Docker Stuff
+[Workshop Git Repo](https://posit-conf-2023.github.io/devops/)
+
+## **Materials**
+
+-   [Slides](https://posit-conf-2023.github.io/devops/slides/workshop_full_slides.html#/title-slide)
+
+-   [Code](https://github.com/posit-conf-2023/devops)
+
+-   [Lab 2](https://posit-conf-2023.github.io/devops/coursework_labs/02_lab_docker/Exercises.html) - **Docker**
+
+    -   Part 1: [Run](https://docs.docker.com/engine/reference/run/) Commands
+    -   Part 2: Debugging Containers
+    -   Part 3: Mapping Ports
+    -   Part 4: Mounting Data
+    -   Part 5: Building images interactively
+    -   Part 6: Building Shiny Server OS with Dockerfile
+
+-   [Lab 3](https://posit-conf-2023.github.io/devops/coursework_labs/03_lab_data_in_prod/lab_solution.html) - **Data in Production**
+
+    -   Part 1: Host API on Posit Connect
+    -   Part 2: Explore your API
+    -   Part 3: Plumber Examples
+    -   Part 4: Push-button deployment
+    -   Part 5: Programmatically access Connect

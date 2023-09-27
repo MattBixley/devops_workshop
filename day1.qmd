@@ -2,7 +2,17 @@
 title: "Day 1"
 ---
 
-https://posit-conf-2023.github.io/devops/
+[Workshop Git Repo](https://posit-conf-2023.github.io/devops/)
+
+## **Materials**
+
+-   [Slides](https://posit-conf-2023.github.io/devops/slides/workshop_full_slides.html#/title-slide)
+
+-   [Code](https://github.com/posit-conf-2023/devops)
+
+-   [Lab 1](https://posit-conf-2023.github.io/devops/coursework_labs/01_lab_devops_CICD/Deploy_Quarto_GHA.html) - **Deploy Quarto with GHA**
+
+Based on the book by Alex Gold "[DevOps for Data Science](https://do4ds.com/)"
 
 My first webpage in quarto
 
