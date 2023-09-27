@@ -14,6 +14,6 @@ format:
 
 ![](images/20230917_130428.jpg){fig-align="center" width="100%"}
 
-This is a Quarto website.
+This is a Quarto website, can run from NeSI.
 
 To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
