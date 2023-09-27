@@ -4,28 +4,42 @@
     "href": "day1.html",
     "title": "Day 1",
     "section": "",
-    "text": "https://posit-conf-2023.github.io/devops/\nMy first webpage in quarto\n\nlibrary(ggplot2)\nlibrary(palmerpenguins)\nlibrary(kableExtra)\nlibrary(tidyverse)\nlibrary(gt)\nlibrary(scales)\nlibrary(paletteer)\nlibrary(ggsci)\n\n\npenguin_sum &lt;- penguins %&gt;%\n  group_by(island, year) %&gt;%\n  summarize(mean_body_mass_g = mean(body_mass_g, na.rm = TRUE)) %&gt;% \n  ungroup()\n\n\npalette &lt;- paletteer::paletteer_d(\"ggsci::teal_material\", n = 3) %&gt;%\n  as.character()\n\npenguin_sum %&gt;% \n  gt() %&gt;% \n  cols_label(\n    mean_body_mass_g = \"Mean Body Mass (g)\"\n    ) %&gt;% \n  tab_header(\n    title = md(\"**Mean body mass of penguins on different islands**\"),\n    subtitle = \"2007-2009\"\n    ) %&gt;% \n  data_color(\n    columns = \"island\",\n    colors = scales::col_factor(\n      as.character(palette),\n      domain = NULL\n    )\n  )\n\nWarning: Since gt v0.9.0, the `colors` argument has been deprecated.\n• Please use the `fn` argument instead.\nThis warning is displayed once every 8 hours.\n\n\n\n\n\n\n  \n    \n      Mean body mass of penguins on different islands\n    \n    \n      2007-2009\n    \n    \n      island\n      year\n      Mean Body Mass (g)\n    \n  \n  \n    Biscoe\n2007\n4740.909\n    Biscoe\n2008\n4628.125\n    Biscoe\n2009\n4792.797\n    Dream\n2007\n3684.239\n    Dream\n2008\n3779.412\n    Dream\n2009\n3691.477\n    Torgersen\n2007\n3763.158\n    Torgersen\n2008\n3856.250\n    Torgersen\n2009\n3489.062\n  \n  \n  \n\n\n\n\n\n\n`geom_smooth()` using formula = 'y ~ x'\n\n\nWarning: Removed 2 rows containing non-finite values (`stat_smooth()`).\n\n\nWarning: Removed 2 rows containing missing values (`geom_point()`)."
+    "text": "Workshop Git Repo"
+  },
+  {
+    "objectID": "day1.html#materials",
+    "href": "day1.html#materials",
+    "title": "Day 1",
+    "section": "Materials",
+    "text": "Materials\n\nSlides\nCode\nLab 1 - Deploy Quarto with GHA\n\nBased on the book by Alex Gold “DevOps for Data Science”\nMy first webpage in quarto\n\nlibrary(ggplot2)\nlibrary(palmerpenguins)\nlibrary(kableExtra)\nlibrary(tidyverse)\nlibrary(gt)\nlibrary(scales)\nlibrary(paletteer)\nlibrary(ggsci)\n\n\npenguin_sum &lt;- penguins %&gt;%\n  group_by(island, year) %&gt;%\n  summarize(mean_body_mass_g = mean(body_mass_g, na.rm = TRUE)) %&gt;% \n  ungroup()\n\n\npalette &lt;- paletteer::paletteer_d(\"ggsci::teal_material\", n = 3) %&gt;%\n  as.character()\n\npenguin_sum %&gt;% \n  gt() %&gt;% \n  cols_label(\n    mean_body_mass_g = \"Mean Body Mass (g)\"\n    ) %&gt;% \n  tab_header(\n    title = md(\"**Mean body mass of penguins on different islands**\"),\n    subtitle = \"2007-2009\"\n    ) %&gt;% \n  data_color(\n    columns = \"island\",\n    colors = scales::col_factor(\n      as.character(palette),\n      domain = NULL\n    )\n  )\n\nWarning: Since gt v0.9.0, the `colors` argument has been deprecated.\n• Please use the `fn` argument instead.\nThis warning is displayed once every 8 hours.\n\n\n\n\n\n\n  \n    \n      Mean body mass of penguins on different islands\n    \n    \n      2007-2009\n    \n    \n      island\n      year\n      Mean Body Mass (g)\n    \n  \n  \n    Biscoe\n2007\n4740.909\n    Biscoe\n2008\n4628.125\n    Biscoe\n2009\n4792.797\n    Dream\n2007\n3684.239\n    Dream\n2008\n3779.412\n    Dream\n2009\n3691.477\n    Torgersen\n2007\n3763.158\n    Torgersen\n2008\n3856.250\n    Torgersen\n2009\n3489.062\n  \n  \n  \n\n\n\n\n\n\n`geom_smooth()` using formula = 'y ~ x'\n\n\nWarning: Removed 2 rows containing non-finite values (`stat_smooth()`).\n\n\nWarning: Removed 2 rows containing missing values (`geom_point()`)."
   },
   {
     "objectID": "day2.html",
     "href": "day2.html",
     "title": "Day 2",
     "section": "",
-    "text": "Docker Stuff"
+    "text": "Workshop Git Repo"
+  },
+  {
+    "objectID": "day2.html#materials",
+    "href": "day2.html#materials",
+    "title": "Day 2",
+    "section": "Materials",
+    "text": "Materials\n\nSlides\nCode\nLab 2 - Docker\n\nPart 1: Run Commands\nPart 2: Debugging Containers\nPart 3: Mapping Ports\nPart 4: Mounting Data\nPart 5: Building images interactively\nPart 6: Building Shiny Server OS with Dockerfile\n\nLab 3 - Data in Production\n\nPart 1: Host API on Posit Connect\nPart 2: Explore your API\nPart 3: Plumber Examples\nPart 4: Push-button deployment\nPart 5: Programmatically access Connect"
   },
   {
     "objectID": "workshops.html",
     "href": "workshops.html",
     "title": "Workshops",
     "section": "",
-    "text": "list of workshops\nWorkshops Repo - posit-conf-2023\nDevOps for Data Scientists"
+    "text": "Workshops Repo - posit-conf-2023\nDevOps for Data Scientists\nTidy Models\nIntro to Quarto\nEngaging and Beautiful Data Visualizations with ggplot2\nGetting Started with Shiny for R\nML and DL with Python"
   },
   {
     "objectID": "day3.html",
     "href": "day3.html",
     "title": "Day 3",
     "section": "",
-    "text": "Talks\nhttps://github.com/pncnmnp/typst-poster\nMine’s talk: https://mine.quarto.pub/manuscripts-conf23/#/title-slide\nCharlotte’s talk: https://cwickham.github.io/whats-new-in-quarto/#/title-slide"
+    "text": "Keynotes\nKey Note Speaker Jeremy Howard’s notebook! https://github.com/fastai/lm-hackers/blob/main/lm-hackers.ipynb\nhttps://github.com/pncnmnp/typst-poster\nMine’s talk: https://mine.quarto.pub/manuscripts-conf23/#/title-slide\nCharlotte’s talk: https://cwickham.github.io/whats-new-in-quarto/#/title-slide"
   },
   {
     "objectID": "index.html",
