@@ -63,13 +63,6 @@
     "text": "https://posit.co/\nhttps://posit.co/conference/\n\n\n\n\n\n\n\n\n\n\n\nThis is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this site\nMy first webpage in quarto\n\n1 + 1\n\n[1] 2"
-  },
-  {
     "objectID": "talks.html",
     "href": "talks.html",
     "title": "Talks",
@@ -95,14 +88,14 @@
     "href": "talks.html#shiny",
     "title": "Talks",
     "section": "Shiny",
-    "text": "Shiny\nUsing R, Python, and Cloud Infrastructure to Battle Aquatic Invasive Species\nNicholas Snellgrove, Tech Lead, Epi-interactive\nUli Muellner, Managing Director, Epi-interactive\nInvasive species are a huge threat to lake ecosystems in Minnesota. With over 10,000 water bodies across the state, having up-to-date data and decision support is critical. Researchers at the University of Minnesota have created four complex R and Python models to support lake managers, all pulled together and presented with the most recent infestation data available. Come along with us to see how we connected these models in the AIS Explorer, a decision support application built in Shiny to help prioritize risks and placing watercraft inspectors, using tools like OCPU and cloud toolings like Lambda, EventBridge and AWS S3.\nshiny without a server - https://github.com/jcheng5/posit-conf-2023-shinylive"
+    "text": "Shiny\nUsing R, Python, and Cloud Infrastructure to Battle Aquatic Invasive Species\nNicholas Snellgrove, Tech Lead, Epi-interactive\nUli Muellner, Managing Director, Epi-interactive\nInvasive species are a huge threat to lake ecosystems in Minnesota. With over 10,000 water bodies across the state, having up-to-date data and decision support is critical. Researchers at the University of Minnesota have created four complex R and Python models to support lake managers, all pulled together and presented with the most recent infestation data available. Come along with us to see how we connected these models in the AIS Explorer, a decision support application built in Shiny to help prioritize risks and placing watercraft inspectors, using tools like OCPU and cloud toolings like Lambda, EventBridge and AWS S3.\n\nWellington based, Full Service POSIT partner\nbuild shiny apps, worked with ESR on the COVID apps\nrun training"
   },
   {
     "objectID": "talks.html#other-resources",
     "href": "talks.html#other-resources",
     "title": "Talks",
     "section": "Other Resources",
-    "text": "Other Resources\nColour - http://web-accessibility.carnegiemuseums.org/design/color/ https://github.com/pncnmnp/typst-poster\nPublish to Confluence\nhttps://quarto.org/docs/publishing/confluence.html"
+    "text": "Other Resources\nColour - http://web-accessibility.carnegiemuseums.org/design/color/ https://github.com/pncnmnp/typst-poster\nPublish to Confluence\nhttps://quarto.org/docs/publishing/confluence.html\nshiny without a server - https://github.com/jcheng5/posit-conf-2023-shinylive"
   },
   {
     "objectID": "chicago.html#section-3",
