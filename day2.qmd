@@ -22,3 +22,7 @@ title: "Day 2"
     -   Part 3: Plumber Examples
     -   Part 4: Push-button deployment
     -   Part 5: Programmatically access Connect
+
+Graduated - DevOps expert\
+mattbixley/[ubuntu_bixley]{.underline}\
+I made a docker image, I think it has a shiny app in it, need a pay rise\

@@ -7,7 +7,23 @@ format:
 
 Workshops Repo - [posit-conf-2023](https://github.com/posit-conf-2023)
 
-[DevOps for Data Scientists](https://posit-conf-2023.github.io/devops/)\
+[DevOps for Data Scientists](https://posit-conf-2023.github.io/devops/)
+
+*Rika Gorn*, Senior Solutions Engineer, Posit, PBC
+
+[Video: Watch Rika Gorn introduce DevOps for Data Scientists and explain why you should consider taking part in this workshop.](https://youtu.be/bVqsYQMDdfo)\
+\
+In this workshop, we will discuss ways to better containerize, deploy, and scale your data products. We'll use both R and shell scripting to virtualize Posit products in the cloud. You'll learn about servers, networking, security, and authorization to be dangerous \-- or at least to understand your DevSecOps teams. By the end of the workshop you will have the tools to start deploying your own data science assets into production.\
+\
+**This workshop is for you if you:**
+
+-   are a data scientist or analyst who wants to put their work into production,
+
+-   want to learn a more about Docker containers and virtual machines, or
+
+-   want to better understand importance of networking, security, storage, and different server architectures to deploying data apps.
+
+\
 
 ### Pretty Things
 

@@ -8,19 +8,19 @@ format:
 
 ## 
 
-![](images/20230916_175457.jpg){width="1125"}
+![](images/20230916_175457.jpg){fig-align="center" width="1125"}
 
 ## 
 
-![](images/20230916_082703.jpg){width="1500"}
+![](images/20230916_082703.jpg){fig-align="center" width="1500"}
 
 ## 
 
-![](images/20230920_065606.jpg){width="1125"}
+![](images/20230920_065606.jpg){fig-align="center" width="100%"}
 
 ## 
 
-![Willis Tower - 410m](images/20230916_140944.jpg){width="1125"}
+![Willis Tower - 410m](images/20230916_140944.jpg){fig-align="center" width="100%"}
 
 ## 
 
@@ -32,7 +32,7 @@ format:
 
 ## 
 
-![Wrigley Field - The Cubs](images/20230920_213344.jpg){fig-align="center" width="1500"}
+![Wrigley Field - The Cubs](images/20230920_213344.jpg){fig-align="center" width="100%"}
 
 ## 
 
@@ -40,4 +40,4 @@ format:
 
 ## 
 
-![](images/20230916_182022.jpg){width="100%"}
+![](images/20230916_182022.jpg){fig-align="center" width="100%"}

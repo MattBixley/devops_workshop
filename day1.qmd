@@ -27,7 +27,7 @@ library(paletteer)
 library(ggsci)
 ```
 
-## Import  
+## Import
 
 ```{r tidydata, warning=F, message=F}
 
@@ -38,7 +38,7 @@ penguin_sum <- penguins %>%
 
 ```
 
-## Table  
+## Table
 
 ```{r table, quietly = T, warning=F, message=F}
 palette <- paletteer::paletteer_d("ggsci::teal_material", n = 3) %>%
@@ -62,7 +62,7 @@ penguin_sum %>%
   )
 ```
 
-## Plot  
+## Plot
 
 ```{r plot, quietly = T, warning=F, message=F}
 bill_len_dep <- ggplot(data = penguins,
