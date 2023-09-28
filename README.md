@@ -1,0 +1,3 @@
+# myPOSITconf
+
+![](images/posit.jpg)
