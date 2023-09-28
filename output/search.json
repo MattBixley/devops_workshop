@@ -42,24 +42,21 @@
     "href": "index.html",
     "title": "posit::conf(2023)",
     "section": "",
-    "text": "https://posit.co/\nhttps://posit.co/conference/\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThis is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
+    "text": "https://posit.co/\nhttps://posit.co/conference/\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThis is a Quarto website, can run from NeSI.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
   },
   {
     "objectID": "talks.html",
     "href": "talks.html",
     "title": "Talks",
     "section": "",
-    "text": "list of talks\nColour - http://web-accessibility.carnegiemuseums.org/design/color/\nparamaterized quarto - https://jadeynryan.github.io/2023_posit-parameterized-quarto/#/title-slide"
+    "text": "Elaine McVey, Senior Director of Analytics, Chief David Meza, Head of Analytics - Human Capital, NASA\nData science teams operate in a unique environment, much different than the IT or software development life cycle. Hope from executives for the impact of data science is extremely high! Understanding of how to make data science efforts successful is very low! This creates an interesting set of organizational challenges for data and analytics teams. These are particularly clear when data science is being introduced at new companies, but plays out at organizations of all sizes. So, how do we navigate this dynamic? We’ll share some strategies for success.\n\ncollect formated data if you can!!!!\n\n\n\n\nJeremy Howard, Founding Researcher, fast.ai, Kaggle\nEveryone is talking about open source large language models (LLMs), but if you want to get hacking with them, it’s not easy to get started. Things are moving so quickly – especially since the release of the breakthrough Llama2 models! In this talk Jeremy will explain the landscape, what you need to get started, and demonstrate what’s possible with the latest tools.\nLive Captioned - and the Notebook.\nhttps://github.com/fastai/lm-hackers/blob/main/lm-hackers.ipynb\n\ngive your model context\nLoRA - low rank adaptation, might be useful to reduce training times for large models, didn;t go into it."
   },
   {
     "objectID": "workshops.html",
     "href": "workshops.html",
     "title": "Workshops",
     "section": "",
-    "text": "Workshops Repo - posit-conf-2023\nDevOps for Data Scientists\n\n\nPretty Things\nGetting Started with Shiny for R\nShiny Dashboards\nShiny in Production\nIntro and Advanced Quarto\nEngaging and Beautiful Data Visualizations with ggplot2\nTeaching Data Science Masterclass\n\n\nWorkflows\nML and DL with Python\nData Science Workflows with Posit Tools - R focus\nData Science Workflows - python\nTidy Models\nBig Data with Arrow\n\n\nPackages\nFundamentals of Package Development\nPackage Development Mastercalss",
-    "crumbs": [
-      "Workshops"
-    ]
+    "text": "Workshops Repo - posit-conf-2023\nDevOps for Data Scientists\nRika Gorn, Senior Solutions Engineer, Posit, PBC\nVideo: Watch Rika Gorn introduce DevOps for Data Scientists and explain why you should consider taking part in this workshop.\n\nIn this workshop, we will discuss ways to better containerize, deploy, and scale your data products. We’ll use both R and shell scripting to virtualize Posit products in the cloud. You’ll learn about servers, networking, security, and authorization to be dangerous -- or at least to understand your DevSecOps teams. By the end of the workshop you will have the tools to start deploying your own data science assets into production.\n\nThis workshop is for you if you:\n\nare a data scientist or analyst who wants to put their work into production,\nwant to learn a more about Docker containers and virtual machines, or\nwant to better understand importance of networking, security, storage, and different server architectures to deploying data apps.\n\n\n\n\nPretty Things\nGetting Started with Shiny for R\nShiny Dashboards\nShiny in Production\nIntro and Advanced Quarto\nEngaging and Beautiful Data Visualizations with ggplot2\nTeaching Data Science Masterclass\n\n\nWorkflows\nML and DL with Python\nData Science Workflows with Posit Tools - R focus\nData Science Workflows - python\nTidy Models\nBig Data with Arrow\n\n\nPackages\nFundamentals of Package Development\nPackage Development Mastercalss"
   },
   {
     "objectID": "day1.html#materials",
@@ -76,7 +73,7 @@
     "href": "day2.html#materials",
     "title": "Day 2",
     "section": "Materials",
-    "text": "Materials\n\nSlides\nCode\nLab 2 - Docker\n\nPart 1: Run Commands\nPart 2: Debugging Containers\nPart 3: Mapping Ports\nPart 4: Mounting Data\nPart 5: Building images interactively\nPart 6: Building Shiny Server OS with Dockerfile\n\nLab 3 - Data in Production\n\nPart 1: Host API on Posit Connect\nPart 2: Explore your API\nPart 3: Plumber Examples\nPart 4: Push-button deployment\nPart 5: Programmatically access Connect"
+    "text": "Materials\n\nLab 2 - Docker\n\nPart 1: Run Commands\nPart 2: Debugging Containers\nPart 3: Mapping Ports\nPart 4: Mounting Data\nPart 5: Building images interactively\nPart 6: Building Shiny Server OS with Dockerfile\n\nLab 3 - Data in Production\n\nPart 1: Host API on Posit Connect\nPart 2: Explore your API\nPart 3: Plumber Examples\nPart 4: Push-button deployment\nPart 5: Programmatically access Connect\n\n\nGraduated - DevOps expert\nmattbixley/ubuntu_bixley\nI made a docker image, I think it has a shiny app in it, need a pay rise\n\n\nlibrary(shiny)\n\n# Define UI for application that draws a histogram\nui &lt;- fluidPage(\n\n    # Application title\n    titlePanel(\"Old Faithful Geyser Data\"),\n\n    # Sidebar with a slider input for number of bins \n    sidebarLayout(\n        sidebarPanel(\n            sliderInput(\"bins\",\n                        \"Number of bins:\",\n                        min = 1,\n                        max = 50,\n                        value = 30)\n        ),\n\n        # Show a plot of the generated distribution\n        mainPanel(\n           plotOutput(\"distPlot\")\n        )\n    )\n)\n\n# Define server logic required to draw a histogram\nserver &lt;- function(input, output) {\n\n    output$distPlot &lt;- renderPlot({\n        # generate bins based on input$bins from ui.R\n        x    &lt;- faithful[, 2]\n        bins &lt;- seq(min(x), max(x), length.out = input$bins + 1)\n\n        # draw the histogram with the specified number of bins\n        hist(x, breaks = bins, col = 'darkgray', border = 'white',\n             xlab = 'Waiting time to next eruption (in mins)',\n             main = 'Histogram of waiting times')\n    })\n}\n\n# Run the application \nshinyApp(ui = ui, server = server)\n\nShiny applications not supported in static R Markdown documents"
   },
   {
     "objectID": "chicago.html#slide-1",
@@ -156,5 +153,33 @@
     "crumbs": [
       "Day 1"
     ]
+  },
+  {
+    "objectID": "talks.html#keynotes",
+    "href": "talks.html#keynotes",
+    "title": "Talks",
+    "section": "",
+    "text": "Elaine McVey, Senior Director of Analytics, Chief David Meza, Head of Analytics - Human Capital, NASA\nData science teams operate in a unique environment, much different than the IT or software development life cycle. Hope from executives for the impact of data science is extremely high! Understanding of how to make data science efforts successful is very low! This creates an interesting set of organizational challenges for data and analytics teams. These are particularly clear when data science is being introduced at new companies, but plays out at organizations of all sizes. So, how do we navigate this dynamic? We’ll share some strategies for success.\n\ncollect formated data if you can!!!!\n\n\n\n\nJeremy Howard, Founding Researcher, fast.ai, Kaggle\nEveryone is talking about open source large language models (LLMs), but if you want to get hacking with them, it’s not easy to get started. Things are moving so quickly – especially since the release of the breakthrough Llama2 models! In this talk Jeremy will explain the landscape, what you need to get started, and demonstrate what’s possible with the latest tools.\nLive Captioned - and the Notebook.\nhttps://github.com/fastai/lm-hackers/blob/main/lm-hackers.ipynb\n\ngive your model context\nLoRA - low rank adaptation, might be useful to reduce training times for large models, didn;t go into it."
+  },
+  {
+    "objectID": "talks.html#quarto",
+    "href": "talks.html#quarto",
+    "title": "Talks",
+    "section": "Quarto",
+    "text": "Quarto\nReproducible Manuscripts with Quarto\nMine Çetinkaya-Rundel, Developer Educator + Professor of the Practice, Posit, PBC\nIn this talk, we present a new capability in Quarto that provides a straightforward and user-friendly approach to creating truly reproducible manuscripts that are publication-ready for submission to popular journals. This new feature, Quarto manuscripts, includes the ability to produce a bundled output containing a standardized journal format, source documents, source computations, referenced resources, and execution information into a single bundle that is ingested into journal review and production processes. We’ll demo how Quarto manuscripts work and how you can incorporate them into your current manuscript development process as well as touch on pain points in your current workflow that Quarto manuscripts help alleviate.\nSlides\nWhat’s New in Quarto?\nCharlotte Wickham, Developer Educator, Quarto, Posit, PBC\nIt’s been over a year since Quarto 1.0, an open-source scientific and technical publishing system, was announced at rstudio::conf(2022). In this talk, I’ll highlight some of the improvements to Quarto since then. You’ll learn about new formats, options, tools, and ways to supercharge your content. And, if you haven’t used Quarto yet, come to see some reasons to try it out.\nCharlotte’s Slides\nQuarto 1.4 will have ability to embed/link images and chunks from Python Notebooks.\n##### Quarto Resources\nhttps://andreaczhang.github.io/qtwAcademic/\nhttps://quarto.org/docs/publishing/\nhttps://jadeynryan.github.io/2023_posit-parameterized-quarto/#/title-slide"
+  },
+  {
+    "objectID": "talks.html#shiny",
+    "href": "talks.html#shiny",
+    "title": "Talks",
+    "section": "Shiny",
+    "text": "Shiny\nUsing R, Python, and Cloud Infrastructure to Battle Aquatic Invasive Species\nNicholas Snellgrove, Tech Lead, Epi-interactive\nUli Muellner, Managing Director, Epi-interactive\nInvasive species are a huge threat to lake ecosystems in Minnesota. With over 10,000 water bodies across the state, having up-to-date data and decision support is critical. Researchers at the University of Minnesota have created four complex R and Python models to support lake managers, all pulled together and presented with the most recent infestation data available. Come along with us to see how we connected these models in the AIS Explorer, a decision support application built in Shiny to help prioritize risks and placing watercraft inspectors, using tools like OCPU and cloud toolings like Lambda, EventBridge and AWS S3.\n\nWellington based, Full Service POSIT partner\nbuild shiny apps, worked with ESR on the COVID apps\nrun training"
+  },
+  {
+    "objectID": "talks.html#other-resources",
+    "href": "talks.html#other-resources",
+    "title": "Talks",
+    "section": "Other Resources",
+    "text": "Other Resources\nColour - http://web-accessibility.carnegiemuseums.org/design/color/ https://github.com/pncnmnp/typst-poster\nPublish to Confluence\nhttps://quarto.org/docs/publishing/confluence.html\nshiny without a server - https://github.com/jcheng5/posit-conf-2023-shinylive"
   }
 ]

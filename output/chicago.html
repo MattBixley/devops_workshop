@@ -8,7 +8,7 @@
 <link href="site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.4.388">
+  <meta name="generator" content="quarto-1.3.353">
 
   <title>posit::conf(2023) - Chicago</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -155,8 +155,7 @@
   }
 
   .callout.callout-titled .callout-body > .callout-content > :last-child {
-    padding-bottom: 0.5rem;
-    margin-bottom: 0;
+    margin-bottom: 0.5rem;
   }
 
   .callout.callout-titled .callout-icon::before {
@@ -335,40 +334,28 @@
 <section id="section" class="slide level2">
 <h2></h2>
 
-<img data-src="images/20230916_175457.jpg" id="fig-539a35d47e664c97a50115a146a7f1bd-1" width="1125" class="r-stretch quarto-figure-center"></section>
+<img data-src="images/20230916_175457.jpg" width="1125" class="r-stretch quarto-figure-center"></section>
 <section id="section-1" class="slide level2">
 <h2></h2>
 
-<img data-src="images/20230916_082703.jpg" id="fig-539a35d47e664c97a50115a146a7f1bd-2" width="1500" class="r-stretch quarto-figure-center"></section>
+<img data-src="images/20230916_082703.jpg" width="1500" class="r-stretch quarto-figure-center"></section>
 <section id="section-2" class="slide level2">
 <h2></h2>
 
-<img data-src="images/20230920_065606.jpg" id="fig-539a35d47e664c97a50115a146a7f1bd-3" width="1125" class="r-stretch quarto-figure-center"></section>
+<img data-src="images/20230920_065606.jpg" style="width:100.0%" class="r-stretch quarto-figure-center"></section>
 <section id="section-3" class="slide level2">
 <h2></h2>
 
-<img data-src="images/20230916_140944.jpg" width="1125" class="r-stretch quarto-figure-center"><p class="caption">Willis Tower - 410m</p></section>
+<img data-src="images/20230916_140944.jpg" style="width:100.0%" class="r-stretch quarto-figure-center"><p class="caption">Willis Tower - 410m</p></section>
 <section id="section-4" class="slide level2">
 <h2></h2>
-<div class="quarto-layout-panel" data-layout-ncol="2">
+<div class="quarto-layout-panel">
 <div class="quarto-layout-row quarto-layout-valign-top">
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<div id="fig-539a35d47e664c97a50115a146a7f1bd-4" class="quarto-figure quarto-figure-center">
-<figure class="quarto-float quarto-float-fig">
-<div>
-<img data-src="images/20230919_063238.jpg" id="fig-539a35d47e664c97a50115a146a7f1bd-4">
-</div>
-</figure>
-</div>
+<p><img data-src="images/20230919_063238.jpg"></p>
 </div>
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<div id="fig-539a35d47e664c97a50115a146a7f1bd-5" class="quarto-figure quarto-figure-center">
-<figure class="quarto-float quarto-float-fig">
-<div>
-<img data-src="images/20230919_063616.jpg" id="fig-539a35d47e664c97a50115a146a7f1bd-5">
-</div>
-</figure>
-</div>
+<p><img data-src="images/20230919_063616.jpg"></p>
 </div>
 </div>
 </div>
@@ -376,7 +363,7 @@
 <section id="section-5" class="slide level2">
 <h2></h2>
 
-<img data-src="images/20230920_213344.jpg" width="1500" class="r-stretch quarto-figure-center"><p class="caption">Wrigley Field - The Cubs</p></section>
+<img data-src="images/20230920_213344.jpg" style="width:100.0%" class="r-stretch quarto-figure-center"><p class="caption">Wrigley Field - The Cubs</p></section>
 <section id="section-6" class="slide level2">
 <h2></h2>
 
@@ -385,7 +372,7 @@
 <h2></h2>
 
 
-<img data-src="images/20230916_182022.jpg" id="fig-539a35d47e664c97a50115a146a7f1bd-6" style="width:100.0%" class="r-stretch quarto-figure-center"><div class="footer footer-default">
+<img data-src="images/20230916_182022.jpg" style="width:100.0%" class="r-stretch quarto-figure-center"><div class="footer footer-default">
 
 </div>
 </section>
@@ -415,6 +402,7 @@
       Reveal.initialize({
 'controlsAuto': true,
 'previewLinksAuto': false,
+'smaller': false,
 'pdfSeparateFragments': false,
 'autoAnimateEasing': "ease",
 'autoAnimateDuration': 1,
@@ -675,9 +663,10 @@
         // clear code selection
         e.clearSelection();
       });
-      function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      function tippyHover(el, contentFn) {
         const config = {
           allowHTML: true,
+          content: contentFn,
           maxWidth: 500,
           delay: 100,
           arrow: false,
@@ -687,17 +676,8 @@
           interactive: true,
           interactiveBorder: 10,
           theme: 'light-border',
-          placement: 'bottom-start',
+          placement: 'bottom-start'
         };
-        if (contentFn) {
-          config.content = contentFn;
-        }
-        if (onTriggerFn) {
-          config.onTrigger = onTriggerFn;
-        }
-        if (onUntriggerFn) {
-          config.onUntrigger = onUntriggerFn;
-        }
           config['offset'] = [0,0];
           config['maxWidth'] = 700;
         window.tippy(el, config); 
